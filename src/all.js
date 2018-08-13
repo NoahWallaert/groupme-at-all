@@ -203,6 +203,11 @@ class AllBot {
   }
 }
 
+var http = require("http");
+setInterval(function() {
+    http.get("http://mention-all-bot.herokuapp.com");
+}, 3480000);
+
 module.exports = robot => {
   const bot = new AllBot(robot);
   bot.run();
